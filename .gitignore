@@ -1,0 +1,11 @@
+## Ignore MASM (Microsoft Macro Assembler) 16-bit binary files
+## Works tested under Microsoft Macro Assembler (16-bit)
+##
+## Zhenbang Xiao
+## 07/FEB/2015
+
+# Incremental Linker File
+*.obj
+
+# Windows Exectuable File
+*.exe
