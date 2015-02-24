@@ -10,3 +10,13 @@ Based on Microsoft Macro Assembler 1992
 ### Print the name in 10 times
 - [name.asm](PrintName10Times/name.asm) - A sample of print name in 10 times.
 - [hello.c](PrintName10Times/hello.c) - A sample of print "Hello World!" in C compared to same result in MASM16. [Click here](PrintName10Times/hellow.asm) to check the sample.
+
+### Detect Digits on Keyboard
+- [press.asm](DetectDigits/press.asm) - When press numbers on keyboard print that number to screen and press ESC to exit.
+
+
+### CPU Speed Test
+- [speed.asm](CPU/speed.asm) - Test the CPU clock frequency. (Under DOS)
+
+### Float Number Evaluation
+- [fp.asm](FloatEval/fp.asm) - Evaluate certain float number into binary.
