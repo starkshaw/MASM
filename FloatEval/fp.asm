@@ -1,9 +1,11 @@
+		; 3^2 + 4^2 = 5^2
+		; 5 is equal 101 in binary
 		.MODEL medium
 		.STACK 100h
 		.DATA
-		SX dd 5.0
-		SY dd 12.0
-		HY dd 0.0
+		SX dd 3.0
+		SY dd 4.0
+		HY dd 0.0	; Will equal 5
 		cntrl dw 03FFh
 		stat dw 0
 		.CODE
@@ -17,12 +19,11 @@
 		FADD ST,ST(1) ; ADD top two numbers on stack
 		FSQRT ; Square root number on stack
 		FSTSW stat ; Load FPU status into [stat]
-		mov ax,stat ; Copy [stat] into ax
-		and al,0BFh ; Check all 6 status bits
-		jnz pass ; If any bit set then jump
+		;mov ax,stat ; Copy [stat] into ax
+		;and al,0BFh ; Check all 6 status bits
+		;jnz pass ; If any bit set then jump
 		FSTP HY ; Copy result from stack into HY
 pass:	nop
-
 		mov bx, OFFSET HY
 		inc bx
 		inc bx
@@ -30,12 +31,12 @@ pass:	nop
 		mov bx, ax
 		
 		mov cx, 16
-back:	rol bx, 1
-		jc set
-		mov dl, '0'
+back:	rol bx, 1	; Rotate bx
+		jc set		; Check MSB first
+		mov dl, '0'	; If carry set to 0
 		jmp over
-set:	mov dl, '1'
-over:	mov ah, 02h
+set:	mov dl, '1'	; If not carry set to 1
+over:	mov ah, 02h	; Print
 		int 021h
 skip:	loop back
 		

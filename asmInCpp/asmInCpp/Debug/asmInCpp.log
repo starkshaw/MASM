@@ -1,0 +1,25 @@
+﻿Build started 2015/3/2 星期一 18:24:38.
+     1>Project "D:\github\C++Studyspace\asmInCpp\asmInCpp\asmInCpp.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\calc.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         asmInCpp.vcxproj -> D:\github\C++Studyspace\asmInCpp\Debug\calc.exe
+       MetaGen:
+       Skipping target "MetaGen" because all output files are up-to-date with respect to the input files.
+       FinalizeBuildStatus:
+         Deleting file "Debug\calc.unsuccessfulbuild".
+         Touching "Debug\calc.lastbuildstate".
+     1>Done Building Project "D:\github\C++Studyspace\asmInCpp\asmInCpp\asmInCpp.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.08
