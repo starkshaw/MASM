@@ -20,3 +20,12 @@ Based on Microsoft Macro Assembler 1992
 
 ### Float Number Evaluation
 - [fp.asm](FloatEval/fp.asm) - Evaluate certain float number into binary.
+
+### Calculate A+B-C ###
+- [A+B-C.cpp](asmInCpp/A+B-C/A+B-C.cpp) - The x86 assembly code integrated with C++ calculate A+B-C.
+
+### Calculate 4^3+sqrt(9) ###
+- [calc.cpp](asmInCpp/asmInCpp/calc.cpp) - The x86 assembly code integrated with C++.
+
+### Basic Pointer ###
+- [basicPointer.cpp](basicPointer/basicPointer/basicPointer.cpp) - This template shows the basic theory of a pointer in C++.
