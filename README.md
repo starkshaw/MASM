@@ -6,6 +6,7 @@ Based on Microsoft Macro Assembler 1992
 
 ### Keyboard Test
 - [Keyboard.asm](KeyboardTest/Keyboard.asm) - A sample of keyboard test in Assemble language, when 'q' been pressed the program stops.
+- [k2.asm](KeyboardTest/k2.asm) - Press the SPACE bar to start the counter appears at the right top corner.
 
 ### Print the name in 10 times
 - [name.asm](PrintName10Times/name.asm) - A sample of print name in 10 times.
@@ -13,7 +14,6 @@ Based on Microsoft Macro Assembler 1992
 
 ### Detect Digits on Keyboard
 - [press.asm](DetectDigits/press.asm) - When press numbers on keyboard print that number to screen and press ESC to exit.
-
 
 ### CPU Speed Test
 - [speed.asm](CPU/speed.asm) - Test the CPU clock frequency. (Under DOS)
