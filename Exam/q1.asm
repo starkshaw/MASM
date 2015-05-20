@@ -18,7 +18,7 @@ back:	dec bx
 		jmp back
 		
 done:	inc cx
-		cmp cx, 10
+		cmp cx, 3
 		jnz start
 		.EXIT
 		END
