@@ -13,14 +13,14 @@ void run() {
 	_asm{
 		FINIT
 		FLDCW cntrl
-		FLD X
-		FLD Y
-		FADD ST(0), ST(1)
-		FLD Z
-		FMUL ST(0), ST(0)
-		FADD ST(0), ST(1)
-		FSQRT
-		FSTP R
+		FLD X				// Load X = 1.0
+		FLD Y				// Load Y = 6.0
+		FADD ST(0), ST(1)	// ST(0) = 6 + 1 = 7
+		FLD Z				// Load Z = 3.0
+		FMUL ST(0), ST(0)	// ST(0) = 3 * 3 = 9
+		FADD ST(0), ST(1)	// ST(0) = 9 + 3 = 16
+		FSQRT				// SQRT(16) = 4
+		FSTP R				// Floating Point Store to R
 	}
 	printf("Decimal: %f\n", R);
 }
