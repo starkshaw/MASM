@@ -1,0 +1,68 @@
+Microsoft (R) Macro Assembler Version 6.11		    05/20/15 17:53:07
+q1a.asm							     Page 1 - 1
+
+
+						.MODEL small
+						.STACK
+ 0000						.DATA
+ 0000 3F 73 65 73 75 20		text	BYTE	"?sesu sti sah msa"
+       73 74 69 20 73 61
+       68 20 6D 73 61
+ 0011 2A			textend	BYTE	"*"
+
+ 0000						.CODE
+						.STARTUP
+ 0017  B9 0000					mov cx, 0
+ 001A  BB 0011 R		start:	mov bx, OFFSET textend
+ 001D  4B			back:	dec bx
+ 001E  8B 17					mov dx, [bx]
+ 0020  80 FA 3F					cmp dl, '?'
+ 0023  74 09					jz done
+ 0025  80 EA 20					sub dl, 'a'-'A'
+ 0028  B4 02					mov ah, 02h
+ 002A  CD 21					int 021h
+ 002C  EB EF					jmp back
+						
+ 002E  41			done:	inc cx
+ 002F  83 F9 03					cmp cx, 3
+ 0032  75 E6					jnz start
+						.EXIT
+						END
+Microsoft (R) Macro Assembler Version 6.11		    05/20/15 17:53:07
+q1a.asm							     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+DGROUP . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	16 Bit	 0012	  Word	  Public  'DATA'	
+STACK  . . . . . . . . . . . . .	16 Bit	 0400	  Para	  Stack	  'STACK'	 
+_TEXT  . . . . . . . . . . . . .	16 Bit	 0038	  Word	  Public  'CODE'	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 0000h	 
+@DataSize  . . . . . . . . . . .	Number	 0000h	 
+@Interface . . . . . . . . . . .	Number	 0000h	 
+@Model . . . . . . . . . . . . .	Number	 0002h	 
+@Startup . . . . . . . . . . . .	L Near	 0000	  _TEXT	
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 DGROUP
+@fardata?  . . . . . . . . . . .	Text   	 FAR_BSS
+@fardata . . . . . . . . . . . .	Text   	 FAR_DATA
+@stack . . . . . . . . . . . . .	Text   	 DGROUP
+back . . . . . . . . . . . . . .	L Near	 001D	  _TEXT	
+done . . . . . . . . . . . . . .	L Near	 002E	  _TEXT	
+start  . . . . . . . . . . . . .	L Near	 001A	  _TEXT	
+textend  . . . . . . . . . . . .	Byte	 0011	  _DATA	
+text . . . . . . . . . . . . . .	Byte	 0000	  _DATA	
+
+	   0 Warnings
+	   0 Errors
