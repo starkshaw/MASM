@@ -18,7 +18,7 @@ void run() {
 		FADD ST(0), ST(1)	// ST(0) = 6 + 1 = 7
 		FLD Z				// Load Z = 3.0
 		FMUL ST(0), ST(0)	// ST(0) = 3 * 3 = 9
-		FADD ST(0), ST(1)	// ST(0) = 9 + 3 = 16
+		FADD ST(0), ST(1)	// ST(0) = 9 + 7 = 16
 		FSQRT				// SQRT(16) = 4
 		FSTP R				// Floating Point Store to R
 	}
